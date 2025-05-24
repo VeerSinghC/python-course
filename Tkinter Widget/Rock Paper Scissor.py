@@ -1,7 +1,6 @@
 import tkinter as tk
 import random
 
-# Main game logic
 def play(user_choice):
     options = ["Rock", "Paper", "Scissors"]
     computer_choice = random.choice(options)
@@ -18,16 +17,13 @@ def play(user_choice):
     
     result_label.config(text=f"Your choice: {user_choice}\nComputer's choice: {computer_choice}\n{result}")
 
-# GUI setup
 window = tk.Tk()
 window.title("Rock Paper Scissors")
 window.geometry("300x250")
 
-# Heading
 title = tk.Label(window, text="Rock Paper Scissors", font=("Arial", 16))
 title.pack(pady=10)
 
-# Buttons for Rock, Paper, Scissors
 rock_btn = tk.Button(window, text="Rock", width=15, command=lambda: play("Rock"))
 rock_btn.pack(pady=5)
 
@@ -37,7 +33,6 @@ paper_btn.pack(pady=5)
 scissors_btn = tk.Button(window, text="Scissors", width=15, command=lambda: play("Scissors"))
 scissors_btn.pack(pady=5)
 
-# Result display
 result_label = tk.Label(window, text="", font=("Arial", 12), justify="center")
 result_label.pack(pady=10)
 
